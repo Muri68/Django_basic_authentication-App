@@ -1,0 +1,16 @@
+
+{% extends "auth_base.html" %}
+
+
+{% block content%}
+
+<h1>{{user.username}}</h1>
+
+<h1>HOME</h1>
+
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token%}
+    <input type="submit" value="logout" class="btn btn-info">
+</form>
+
+{% endblock %}
