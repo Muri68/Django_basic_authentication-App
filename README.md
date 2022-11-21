@@ -28,7 +28,7 @@ Install Virtual Environment First
 pip install virtualenv
 ```
 
-##### Create Virtual Environment
+### Create Virtual Environment
 
 ###### For Windows
 ```python
@@ -65,6 +65,29 @@ venv\scripts\activate
  source bin/activate
 ```
 
+#### Clone this project
 
+```python
+https://github.com/Muri68/Django_basic_authentication-App.git
+```
 
+###### Then, Enter the project
+```python
+cd Django_basic_authentication-App
+```
 
+###### Install Requirements from 'requirements.txt'
+```python
+pip install -r requirements.txt
+```
+
+ #### Login Credentials
+
+###### Create Super Command for PC:
+```python
+python manage.py createsuperuser
+```
+###### Now Run Server
+```python
+python manage.py runserver
+```
