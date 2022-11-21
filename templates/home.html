@@ -3,14 +3,30 @@
 
 
 {% block content%}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="{% url 'home' %}">Django Basic Authentication App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}}"> Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="{% url 'logout' %}" method="post">
+        {% csrf_token%}
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">logout</button>
+    </form>
+    </div>
+</nav>
 
-<h1>{{user.username}}</h1>
-
-<h1>HOME</h1>
-
-<form action="{% url 'logout' %}" method="post">
-    {% csrf_token%}
-    <input type="submit" value="logout" class="btn btn-info">
-</form>
+  <main role="main" class="container">
+    <div class="jumbotron">
+      <h1>Django Basic Authentication App</h1>
+      <p class="lead">This is a Django BASIC AUTHENTICATIN SYSTEM  with FORGOT PASSWORD fuctionality</p>
+      <a class="btn btn-lg btn-primary" href="{% url 'profile' %}" role="button">My Profile &raquo;</a>
+    </div>
+  </main>
 
 {% endblock %}
